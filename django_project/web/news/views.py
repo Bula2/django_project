@@ -5,7 +5,7 @@ from django.views.generic import DetailView, UpdateView, DeleteView
 
 
 def news_home(request):
-    news = Articles.objects.order_by("-data")[:2]
+    news = Articles.objects.order_by("-data")
     return render(request, 'news/news_home.html', {'news' : news})
 
 class NewsDetailView(DetailView):
@@ -30,7 +30,7 @@ def create(request):
         form=ArticlesForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('news')
+            return redirect('news_home')
         else:
             error = 'Форма заполнена неверно'
 
