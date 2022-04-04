@@ -9,7 +9,7 @@ aside{
     padding: 2.5%;
     height: 100vh;
     color: #020400;
-    border-right: 5px solid #4d4d4d;
+    border-right: 5px;
 }
 
 aside img{
@@ -44,22 +44,24 @@ aside ul li, aside ul a{
         text-decoration: none;
         transition: transform .4s ease;
 }
-
+ aside ul li.add_news{
+    margin-left: -10px;
+ }
 
 aside ul li:hover, aside ul a:hover{
     color: red;
     transform: scale(1.03);
 }
 
-.my_vk{
+a.my_vk:active, a.my_vk:hover, a.my_vk{
     text-decoration:none;
-    color: black;
+    color: #fff;
 }
 
 main .features {
     float: left;
     color: #fff;
-    margin-top: 60px;
+    margin-top: 30px;
     text-align: center;
     width: 75%;
 
@@ -73,4 +75,18 @@ main .features p{
     font-size: 16px;
     max-width: 600px;
     margin: 15px auto;
+}
+
+.alert-warning{
+    float:left;
+    clear:both;
+    width: 400px;
+    margin: 20px 31.5%;
+    text-align: center;
+}
+
+form {
+    margin-left: 25%;
+    width: 500px;
+    margin: 20px auto;
 }
